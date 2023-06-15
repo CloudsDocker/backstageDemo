@@ -1,0 +1,22 @@
+apiVersion: backstage.io/v1alpha1
+kind: Template
+metadata:
+  name: springboot-java-service
+  title: Spring Boot Java Service
+  description: Create a new Spring Boot Java service
+  tags:
+    - java
+    - spring
+    - service
+spec:
+  owner: team-name
+  type: service
+  steps:
+    - id: fetch-base
+      name: Fetch Base
+      action: fetch:plain
+      input:
+        url: ./template
+        targetPath: ./springboot-service
+  output:
+    fetchUrl: ./springboot-service
